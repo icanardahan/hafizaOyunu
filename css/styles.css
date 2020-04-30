@@ -1,0 +1,136 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/background.png');
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 1000;
+}
+
+
+
+.deck {
+    width: 660px;
+    min-height: 680px;
+    background: linear-gradient(to right, #17EAD9, #6078EA);
+    padding: 32px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #0ad8f7;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin: 0 0 3em;
+
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background: #2d266f;
+    font-size: 0;
+    color: #fd0f77;
+    border-radius: 8px;
+    cursor: crosshair;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    ;
+}
+
+.deck .card.open {
+    transform: rotateY(0) !important;
+    background: #0ad8f7;
+    cursor: crosshair;
+}
+
+.deck .card.show {
+    font-size: 50px;
+}
+
+.deck .card.match {
+    cursor: crosshair;
+    background: #02ccba;
+    font-size: 50px;
+}
+
+
+
+.score-panel {
+    text-align: left;
+    width: 250px;
+    margin-bottom: 15px;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 15px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: crosshair;
+}
+
+
+@media only screen and (max-width: 400px) {
+    .deck .card {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+    }
+
+    .deck {
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width: 250px) {
+    .deck .card {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+    }
+
+    .deck {
+        width: 300px;
+    }
+}
